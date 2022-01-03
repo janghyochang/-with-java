@@ -1,20 +1,17 @@
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.*;
 
 public class bj15552 {
     public static void main(String[] args){
-        // int cycle, A, B;
-        // Scanner scanner = new Scanner(System.in);
-        // cycle = scanner.nextInt();
-        // int[] arr = new int[cycle]; 
+        try{
+            BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+            String s = bf.readLine();
+            StringTokenizer st = new StringTokenizer(s);
 
-        // for(int i=0;i<cycle;i++){
-        //     A = scanner.nextInt();
-        //     B = scanner.nextInt();
-        //     arr[i] = A+B;
-        // }
-
-        // for(int num : arr){
-        //     System.out.println(num);
-        // }
+        } catch(IOException e){                 // 입출력 스트림 예외처리
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+        }
     }
 }
