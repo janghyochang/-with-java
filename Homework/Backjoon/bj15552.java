@@ -1,17 +1,23 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.*;
+import java.util.StringTokenizer;
 
 public class bj15552 {
-    public static void main(String[] args){
-        try{
-            BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-            String s = bf.readLine();
-            StringTokenizer st = new StringTokenizer(s);
-
-        } catch(IOException e){                 // 입출력 스트림 예외처리
-			e.printStackTrace();
-			System.out.println(e.getMessage());
-        }
+    public static void main(String[] args) throws IOException {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+            
+            int cycle = Integer.parseInt(br.readLine());
+            
+            for (int i = 0; i < cycle; i++) {
+                StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+                
+                int A = Integer.parseInt(st.nextToken());
+                int B = Integer.parseInt(st.nextToken());
+                
+                bw.write(A+B + "\n");
+            }
+            bw.flush();
+            bw.close();
+            br.close();
     }
 }
